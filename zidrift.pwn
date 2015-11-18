@@ -5035,7 +5035,7 @@ public OnPlayerCommandText(playerid, cmdtext[])
 	{
 		if(IsPlayerConnected(playerid))
 		{
-			ShowPlayerDialog(playerid, RADIO, DIALOG_STYLE_LIST, "Выберите Радио волну:","Zaycev FM\nNoise FM\nRadio Record\nEurope +\nVesti FM\n{FF3300}Выключить радио", "Ok", "Выход");
+			ShowPlayerDialog(playerid, RADIO, DIALOG_STYLE_LIST, "Выберите Радио волну:","Zaycev FM\nNoise FM\nRadio Record\nEuropa +\n{FF3300}Выключить радио", "Ok", "Выход");
 		}
 		return 1;
 	}
@@ -5120,7 +5120,7 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 {
 	new carid = GetPlayerVehicleID(playerid);
 	new engine,lights,alarm,doors,bonnet,boot,objective;
-	if(dialogid == 0)//так же не моё, из AutoMenu
+	if(dialogid == 0)
 	{
 		if(response)
 		{
@@ -5191,7 +5191,7 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 			}
 			if(listitem == 4)
 			{
-				ShowPlayerDialog(playerid, 88, DIALOG_STYLE_MSGBOX, "{33FF00}Обновления", "{FF3300}Версия 3.5.1 {33FF00}modern35\n{FF3300}Следующая версия v3.6 {33FF00}Подробности: vk.com/zidrift", "Выбор", "");
+				ShowPlayerDialog(playerid, 88, DIALOG_STYLE_MSGBOX, "{33FF00}Обновления", "{FF3300}Версия 3.6\n{FF3300}Вся информация об обновлениях в нашей группе {33FF00}Вконтакте: vk.com/zidrift", "Выбор", "");
 			}
 			if(listitem == 5)
 			{
@@ -6027,11 +6027,7 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 			{
 				PlayAudioStreamForPlayer(playerid,"http://europaplus.hostingradio.ru:8014/europaplus256.mp3.m3u");
 			}
-			if(listitem == 4)// (6)
-			{
-				PlayAudioStreamForPlayer(playerid,"http://radio.north.kz:8000/vestifm.m3u");
-			}
-			if(listitem == 5)// (7)
+			if(listitem == 4)// (7)
 			{
 				StopAudioStreamForPlayer(playerid);
 			}
@@ -6211,8 +6207,6 @@ Float:PlayerSpeedDistance;
 	return spe;
 }
 
-//------------------------------------------------
-
 stock strrest(const string[], &index)
 {
 	new length = strlen(string);
@@ -6268,15 +6262,4 @@ public Reklama()
 	case 5: SendClientMessageToAll(COLOR_GREEN,"Наш IP: 127.0.0.1:7777");
 	case 6: SendClientMessageToAll(COLOR_GREEN,"Дешевый донат! Подробности в группе ВК.");
 	}
-	SendRconCommand("weather 17");
-	SendRconCommand("worldtime 00:00");
-	//    SendClientMessageToAll(COLOR_RED,"---------------------------------------------------");
-	//	SendClientMessageToAll(COLOR_GREEN,"Вы играете на на ZiDrift [0.3z]");
-	//	SendClientMessageToAll(COLOR_GREEN,"Наша группа ВКонтакте: vk.com/zidrift");
-	//	SendClientMessageToAll(COLOR_GREEN,"Гл. админ: ZipGarder");
-	//	SendClientMessageToAll(COLOR_GREEN,"Зам. гл. админа: Nikita_Bombo");
-	//	SendClientMessageToAll(COLOR_YELLOW,"Вызов меню: ALT(пешком) или 2(в автомобиле)");
-	//	SendClientMessageToAll(COLOR_YELLOW,"Переключение радио в авто: Num4 Num6");
-	//	SendClientMessageToAll(COLOR_GREEN,"Приятной игры!");
-	//	SendClientMessageToAll(COLOR_RED,"---------------------------------------------------");
 }
