@@ -5109,7 +5109,7 @@ public OnPlayerKeyStateChange(playerid, newkeys, oldkeys)
 
 public OnPlayerDeath(playerid, killerid, reason)
 {
-	SendClientMessage(playerid, 0xFFFF00AA, "Вы умерли :D");
+	SendClientMessage(playerid, 0xFF0000AA, "Вы умерли :(");
 	PlayAudioStreamForPlayer(playerid,"http://zidrift.tk/sources/sounds/kill.mp3");
 	GivePlayerMoney(killerid, 10000);
 	SendDeathMessage(killerid,playerid,reason);
@@ -5175,7 +5175,7 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 		{
 			if(listitem == 0)
 			{
-				ShowPlayerDialog(playerid, 88, DIALOG_STYLE_MSGBOX, "{33FF00}Администрация сервера", "\n{FF3300}Гл. администратор: ZipGarder\nЗам. гл. администратора: Nikita_Bombo\nСооснователи: MSkream, Lisenok, Jizzy99", "OK", "");
+				ShowPlayerDialog(playerid, 88, DIALOG_STYLE_MSGBOX, "{33FF00}Администрация сервера", "\n{FF3300}Гл. администратор: zipgarder\nЗам. гл. администратора: THE1024GB\nХелпер: Oleg_Buzhor", "OK", "");
 			}
 			if(listitem == 1)
 			{
@@ -6259,7 +6259,7 @@ public Reklama()
 	case 2: SendClientMessageToAll(COLOR_GREEN,"Чтобы узнать, какие сейчас админы в сети - введите /admins");
 	case 3: SendClientMessageToAll(COLOR_GREEN,"Для вызова помощи введите /help");
 	case 4: SendClientMessageToAll(COLOR_GREEN,"Наша группа ВК vk.com/zidrift ");
-	case 5: SendClientMessageToAll(COLOR_GREEN,"Наш IP: 127.0.0.1:7777");
+	case 5: SendClientMessageToAll(COLOR_GREEN,"Наш IP: 217.106.106.88:7398");
 	case 6: SendClientMessageToAll(COLOR_GREEN,"Дешевый донат! Подробности в группе ВК.");
 	}
 }
